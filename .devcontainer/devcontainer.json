@@ -12,5 +12,5 @@
             ]
         }
     },
-    "postCreateCommand": "uv pip install --system fastapi"
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH=$PATH:$HOME/.cargo/bin && uv pip install --system fastapi"
 }
