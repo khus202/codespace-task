@@ -2,7 +2,9 @@
     "name": "ga2-ebc873",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/devcontainers/features/python:1": {}
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "latest"
+        }
     },
     "customizations": {
         "vscode": {
@@ -12,4 +14,5 @@
             ]
         }
     },
-"postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | BINDIR=$HOME/.local/bin sh && sudo $HOME/.local/bin/uv pip install --system fastapi --break-system-packages"}
+    "postCreateCommand": "uv pip install fastapi --system --break-system-packages"
+}
